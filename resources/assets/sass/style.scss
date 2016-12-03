@@ -1,0 +1,597 @@
+	/**
+	 * @author: Hanna Rajkovic – hannarajkovic.com
+	 **/
+
+	html {
+	 	font-size: 62.5%;
+	 }
+
+	body{
+		-webkit-font-smoothing: antialiased;
+		font-family: 'Open Sans', Helvetica, sans-serif;
+		color: $lightGrey;
+		background-color: $creamWhite;
+	}
+
+	p::selection, h1::selection, h2::selection, a::selection {
+		background-color: $greyGrey;
+	}
+
+	/* Layout */
+
+	.wrapper {
+		margin: 0 auto;
+		width: $pageWidth;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px){
+			margin: 0 auto;
+			width: 90%;
+			padding:0 5%;
+		}
+	}
+
+	.header .wrapper {
+	    background-image: url(../img/gloggbadgebig.svg);
+	    padding-bottom: 59px;
+	    background-size: 59%;
+	    background-repeat: no-repeat;
+	    background-position: right center;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+		    background-size: 59%;
+		}
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			padding-bottom: 26px;
+		    background-size: 59%;
+		}
+
+	}
+
+	.header {
+		background: $mulledWineRed;
+	}
+
+	/* Header */
+
+	h1 {
+		font-family: 'Raleway', Helvetica, sans-serif;
+		font-size: 7.2rem;
+		line-height: 7.4rem;
+		color: $creamWhite;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 20px;
+		display: inline-block;
+		float: left;
+		max-width: 50%;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			font-size: 5.2rem;
+			line-height: 5.4rem;
+			padding-top: 20px;
+		}
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: 3.6rem;
+			line-height: 3.8rem;
+			padding-top: 10px;
+		}
+	}
+
+	p.welcome-text {
+		font-family: 'Bree Serif', serif;
+		font-size: $baseFontSize;
+		padding-top: 40px;
+		color: $creamWhite;
+		text-transform: uppercase;
+		letter-spacing: 1.54px;
+		margin-top: 0;
+		margin-bottom: 0;
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			font-size: $baseFontSize;
+			padding-top: 20px;
+		}
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMedium;
+		}
+	}
+
+	/* Invite content */
+
+	.content {
+		display: block;
+		margin-bottom: 80px;
+		padding-top: 12px;
+	}
+
+
+	.column-one {
+		float: left;
+		width: 33.33%;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	.column-two {
+		float: left;
+		width: 66.66%;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	/* "Taken" from: http://cssmojo.com/latest_new_clearfix_so_far/ */
+	.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.clearfix.row-one {
+		margin-top: 60px;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			margin-top: 40px;
+		}
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			margin-top: 20px;
+		}
+	}
+
+	.clearfix.row-two {
+		margin-top: 60px;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			margin-top: 40px;
+		}
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			margin-top: 20px;
+		}
+	}
+
+	p.lowercase-big {
+		font-size: 3.1rem;
+		line-height: 3.4rem;
+		margin: auto;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			text-align: center;
+		}
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeTitle;
+			line-height: 2.0rem;
+		}
+
+	}
+
+	p.lowercase {
+		font-size: $baseFontSize;
+		line-height: 2.2rem;
+		line-height: 2.2rem;
+		margin: auto;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			font-size: $baseFontSizeMedium;
+			text-align: center;
+		}
+	}
+
+	p.tagline {
+		font-size: 2.6rem;
+		line-height: 3.2rem;
+		margin: auto;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			text-align: center;
+		}
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSize;
+			line-height: 2.0rem;
+		}
+	}
+
+	p.title-text {
+		font-family: 'Bree Serif', serif;
+		font-weight: bold;
+		font-size: $baseFontSize;
+		color: lighten($mulledWineRed, 10%);
+		text-transform: uppercase;
+		letter-spacing: 1.54px;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			text-align: center;
+		}
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMedium;
+		}
+	}
+
+	.btn-grey {
+		font-family: 'Bree Serif', serif;
+		font-size: $baseFontSizeMedium;
+		color: lighten($lightGrey, 5%);
+		font-weight: bold;
+		letter-spacing: 1.2px;
+		border: 1px solid lighten($lightGrey, 10%);
+		text-transform: uppercase;
+		cursor: pointer;
+		padding: 16px 24px;
+		text-decoration: none;
+		display: inline-block;
+		&:hover {
+			background: lighten($lightGrey, 10%);
+			color: $creamWhite;
+		}
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			font-size: $baseFontSizeMobile;
+			padding: 14px 20px;
+		}
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMobileMini;
+		}
+	}
+
+	/* Form */
+
+	h2.form-headline {
+		font-family: 'Raleway', Helvetica, sans-serif;
+		text-align: center;
+		font-size: 4.8rem;
+		line-height: 5.0rem;
+		font-weight: bold;
+		color: $creamWhite;
+		margin: auto;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			font-size: 4.8rem;
+			line-height: 5.0rem;
+		}
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: 2.8rem;
+			line-height: 3.0rem;
+		}
+	}
+
+	.radios{
+		display:block;
+		margin: 52px 0;
+		text-align: center;
+		vertical-align: top;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			margin: 10px 0;
+		}
+	}
+
+	.inline {
+		position: relative;
+		display: block;
+		margin-bottom: 15px;
+		padding-left: 30px;
+		cursor: pointer;
+
+		&:first-child {
+			margin-right: 30px;
+			margin-top: 20px;
+
+			@media only screen and (max-device-width: 470px), (max-width: 470px) {
+				margin-right: 8px;
+			}
+		}
+
+		input {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+		}
+
+		.inline-indicator {
+			margin-right: 10px;
+			@media only screen and (max-device-width: 470px), (max-width: 470px) {
+				margin-right: 0;
+			}
+		}
+
+		span.text {
+			margin-left: 10px;
+			font-size:$baseFontSizeTitle;
+
+			@media only screen and (max-device-width: 470px), (max-width: 470px) {
+				margin-left: 1px;
+				font-size:$baseFontSizeMedium;
+			}
+		}
+
+	}
+
+	.inline-indicator {
+		position: absolute;
+		top: -4px;
+		left: 0;
+		width: 28px;
+		height: 28px;
+		background: $creamWhite;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			top: 1px;
+			left: 0;
+			width: 22px;
+			height: 22px;
+		}
+	}
+
+	.radios .inline-indicator {
+		border-radius: 50%;
+	}
+
+	/* Hover and focus states */
+	.radios:hover input ~ .inline-indicator,
+	.radios input:focus ~ .inline-indicator {
+		background: $creamWhite;
+	}
+
+	/* Checked state */
+	.radios input:checked ~ .inline-indicator {
+		background: lighten($mulledWineRed, 15%);
+	}
+
+	/* Disabled state */
+	.radios input:disabled ~ .inline-indicator {
+		pointer-events: none;
+		opacity: .6;
+		background: $creamWhite;
+
+	}
+
+	/* Check mark */
+	.inline-indicator:after {
+		position: absolute;
+		display: none;
+		content: '';
+	}
+
+	/* Show check mark */
+	.radios input:checked ~ .inline-indicator:after {
+		display: block;
+	}
+
+	/* Checkbox tick */
+	.radios .inline-indicator:after {
+		top: 4px;
+		left: 8px;
+		width: 3px;
+		height: 8px;
+		transform: rotate(45deg);
+		border: solid $creamWhite;
+		border-width: 0 2px 2px 0;
+	}
+
+	/* Disabled tick colour */
+	.radios input:disabled ~ .inline-indicator:after {
+		border-color: $creamWhite;
+	}
+
+	/* Radio button inner circle */
+	.radios .inline-indicator:after {
+		top: 8px;
+		left: 8px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: $creamWhite;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			top: 7px;
+			left: 7px;
+			width: 6px;
+			height: 6px;
+		}
+
+	}
+
+	/* Disabled circle colour */
+	.radios input:disabled ~ .inline-indicator:after {
+		background: $creamWhite;
+	}
+
+	label {
+		font-family: 'Bree Serif', serif;
+		font-size: $baseFontSizeMedium;
+		line-height: 2.2rem;
+		text-transform: uppercase;
+		font-weight: 100;
+		letter-spacing: 2.4px;
+		display: block;
+		color:$creamWhite;
+		margin-bottom: 8px;
+		margin-top: 20px;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMobileMini;
+			margin-top: 14px;
+			margin-bottom: 4px;
+			letter-spacing: 2.0px;
+		}
+	}
+
+	label.inline {
+		display: inline-block;
+	}
+
+	input[type="text"], input[type="email"], select, textarea {
+		font-family: 'Open Sans', Helvetica, sans-serif;
+		outline-color: $creamWhite;
+		font-size: $baseFontSizeMedium;
+		line-height: 2.6rem;
+		padding: 2% 2%;
+		color: darken($lightGrey, 10%);
+		border: 1px inset;
+		display: block;
+		width: 96%;
+		border-width:0px;
+		border:none;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMobile;
+			padding: 0.5% 0.5%;
+		}
+	}
+
+	textarea {
+		font-family: 'Open Sans', Helvetica, sans-serif;
+		background-color: $creamWhite;
+		font-size: $baseFontSizeMedium;
+		color: darken($lightGrey, 10%);
+		line-height: 1.8rem;
+		overflow: scroll;
+		resize: vertical;
+		padding-bottom: 70px;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMobileMini;
+			line-height: 1.4rem;
+			padding-bottom: 36px;
+		}
+	}
+
+	.form-box {
+		width:80%;
+		display: block;
+		margin: 0 auto;
+		background-color: $mulledWineRed;
+	}
+
+	.form-box-inner {
+		padding:15%;
+		position: relative;
+	}
+
+	.form-btn-row {
+		margin-top: 70px;
+		text-align: center;
+	}
+
+	.form-btn-row a {
+		font-size: $baseFontSizeMedium;
+		font-weight: bold;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			font-size: $baseFontSizeMobile;
+			margin-top: 10px;
+		}
+	}
+
+	button.btn-red {
+		font-family: 'Bree Serif', serif;
+		font-size: $baseFontSizeMedium;
+		border: none;
+		font-weight: bold;
+		letter-spacing: 1.2px;
+		background-color: lighten($mulledWineRed, 10%);
+		outline-color: lighten($mulledWineRed, 10%);
+		color: $creamWhite;
+		text-transform: uppercase;
+	    padding: 22px 38px;
+		text-decoration: none;
+		text-align: center;
+		cursor: pointer;
+		display: inline-block;
+		&:hover{
+			color: $creamWhite;
+			background-color:darken($mulledWineRed, 5%);
+		}
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMobileMini;
+			padding: 14px 20px;
+		}
+	}
+
+	.error {
+	    color: $creamWhite;
+		font-size: $baseFontSizeMedium;
+		line-height: 18px;
+		font-family: 'Open Sans', Helvetica, sans-serif;
+		text-transform: none;
+		letter-spacing: 0;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMobileMini;
+			line-height: 14px;
+		}
+
+  	}
+
+	/* Footer info */
+
+	.footer {
+		padding-bottom: 40px;
+		margin-top: 40px;
+
+		@media only screen and (max-device-width: 890px), (max-width: 890px) {
+			float: none;
+			padding-bottom: 50px;
+			margin-top: 50px;
+		}
+	}
+
+	.copyright {
+		font-family: 'Bree Serif', serif;
+		text-align: center;
+	    font-size: $baseFontSizeMedium;
+	    word-wrap: break-word;
+	    padding-top: 60px;
+	    padding-bottom: 80px;
+	    text-transform: uppercase;
+	    letter-spacing: 1.5px;
+
+		@media only screen and (max-device-width: 470px), (max-width: 470px) {
+			font-size: $baseFontSizeMobileMini;
+			padding-top: 10px;
+		    padding-bottom: 10px;
+		}
+	}
+
+	p.copyright a {
+	    text-decoration: none;
+	    cursor: pointer;
+	    color: $lightGrey;
+		&:hover {
+			color:lighten($mulledWineRed, 22%);
+		}
+	}
+
+	/* Other media queries */
+
+	/* Tablet-sized devices */
+	@media only screen and (max-device-width: 890px), (max-width: 890px) {
+
+		.center-small {
+			margin-top: 20px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+
+		.content {
+			margin-bottom: 40px;
+		}
+	}
+
+	/* Mobile-sized devices */
+	@media only screen and (max-device-width: 470px), (max-width: 470px) {
+
+		.content {
+			margin-bottom: 20px;
+		}
+	}
