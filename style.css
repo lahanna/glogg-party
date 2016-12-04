@@ -216,6 +216,7 @@ input[type="text"], input[type="email"], select, textarea {
 	color: #9a9a9a;
 	padding: 2% 2%;
 	border: 1px inset;
+	border-radius: 0;
 	display: block;
 	width: 96%;
 	border-width:0px;
