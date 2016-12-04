@@ -432,6 +432,7 @@
 		outline-color: $creamWhite;
 		font-size: $baseFontSizeMedium;
 		line-height: 2.6rem;
+		border-radius: 0;
 		padding: 2% 2%;
 		color: darken($lightGrey, 10%);
 		border: 1px inset;
@@ -443,6 +444,7 @@
 		@media only screen and (max-device-width: 470px), (max-width: 470px) {
 			font-size: $baseFontSizeMobile;
 			padding: 0.5% 0.5%;
+			width:99%;
 		}
 	}
 
@@ -465,7 +467,6 @@
 
 	.form-box {
 		width:80%;
-		display: block;
 		margin: 0 auto;
 		background-color: $mulledWineRed;
 	}
